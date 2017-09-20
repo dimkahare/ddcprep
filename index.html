@@ -1,0 +1,24 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Davinci DDC</title>
+    <meta name="description" content="Davinci DDC">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="dist/davinciDDC.js"></script>
+</head>
+<body>
+<script>
+    var rules = [];
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg"><rect x="7" y="-1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.3135 7.9995)" width="2" height="17.999"/><rect x="7" y="-0.999" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 7.9988 19.3142)" width="2" height="17.999"/></svg>';
+    var ddc = new DavinciDDC.default(svg, rules);
+
+    ddc.getParsedSvg()
+        .then((parsedSvg) => {
+            console.log('parsed svg:', parsedSvg);
+        });
+</script>
+</body>
+</html>

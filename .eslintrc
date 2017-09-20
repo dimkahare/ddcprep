@@ -1,0 +1,38 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "amd": true
+    },
+    "globals": {
+        "Uint8ClampedArray": true,
+        "describe": true,
+        "expect": true,
+        "test": true
+    },
+    "rules": {
+        "no-cond-assign": [
+            "error",
+            "except-parens"
+        ],
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "error"
+                ]
+            }
+        ],
+        "no-unused-vars": [
+            "error",
+            {
+                "vars": "local",
+                "args": "none"
+            }
+        ],
+        "no-case-declarations": "off"
+    },
+    "extends": [
+        "eslint:recommended"
+    ]
+}
